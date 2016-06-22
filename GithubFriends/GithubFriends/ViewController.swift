@@ -50,6 +50,7 @@ class ViewController: UIViewController, GithubAPIDelegate {
         self.userNameLabel.text = githubFriend.username
         
         //print(githubFriend.username)
+        print(githubFriend.dateJoined)
         
         self.emailLabel.text = githubFriend.userEmail
         
@@ -66,13 +67,15 @@ class ViewController: UIViewController, GithubAPIDelegate {
         
         
         let formattedDate = NSDateFormatter()
-        formattedDate.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        formattedDate.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        print(githubFriend.dateJoined)
+        
         
         if let theDate = formattedDate.dateFromString(githubFriend.dateJoined) {
             
             formattedDate.dateFormat = "MMM d, yyyy"
             self.dateJoinedLabel.text = formattedDate.stringFromDate(theDate)
-            
+            //print(formattedDate.stringFromDate(theDate))
         }
         
     }
