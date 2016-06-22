@@ -27,6 +27,10 @@ class ViewController: UIViewController, GithubAPIDelegate {
     
     @IBOutlet weak var dateJoinedLabel: UILabel!
     
+    @IBOutlet weak var publicRepLabel: UILabel!
+    
+    @IBOutlet weak var publicGistLabel: UILabel!
+    
     let controller = APIController()
     
     override func viewDidLoad() {
@@ -52,7 +56,24 @@ class ViewController: UIViewController, GithubAPIDelegate {
         self.followersLabel.text = String(githubFriend.followers)
         self.followingLabel.text = String(githubFriend.following)
         
+        self.publicRepLabel.text = String(githubFriend.publicRepository)
+        self.publicGistLabel.text = String(githubFriend.publicGists)
+        
+        
         self.getImageFromURLString(githubFriend.avatarImage)
+        
+        
+        
+        
+        let formattedDate = NSDateFormatter()
+        formattedDate.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        if let theDate = formattedDate.dateFromString(githubFriend.dateJoined) {
+            
+            formattedDate.dateFormat = "MMM d, yyyy"
+            self.dateJoinedLabel.text = formattedDate.stringFromDate(theDate)
+            
+        }
         
     }
     
