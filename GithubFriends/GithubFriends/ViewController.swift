@@ -15,8 +15,17 @@ protocol GithubAPIDelegate : class  {
 class ViewController: UIViewController, GithubAPIDelegate {
 
 
+    @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+
+    @IBOutlet weak var followersLabel: UILabel!
+
+    @IBOutlet weak var followingLabel: UILabel!
+    
+    @IBOutlet weak var dateJoinedLabel: UILabel!
     
     let controller = APIController()
     
@@ -33,7 +42,15 @@ class ViewController: UIViewController, GithubAPIDelegate {
     func passDictionary(dict: JSONDictionary) {
         
         let githubFriend = Friend(dict: dict)
-        print(githubFriend.username)
+        
+        self.userNameLabel.text = githubFriend.username
+        
+        //print(githubFriend.username)
+        
+        self.emailLabel.text = githubFriend.userEmail
+        
+        self.followersLabel.text = String(githubFriend.followers)
+        self.followingLabel.text = String(githubFriend.following)
         
         self.getImageFromURLString(githubFriend.avatarImage)
         

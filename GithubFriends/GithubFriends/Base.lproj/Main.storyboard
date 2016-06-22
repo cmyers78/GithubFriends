@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Github Friend-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GithubFriends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Github Friend" id="BYZ-38-t0r" customClass="ViewController" customModule="GithubFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,21 +19,115 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-aj-XMv">
-                                <rect key="frame" x="155.5" y="184" width="289" height="232"/>
+                                <rect key="frame" x="10" y="95" width="200" height="240"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6Io-uF-0fB"/>
                                     <constraint firstAttribute="width" constant="289" id="D6y-Vz-eNl"/>
                                     <constraint firstAttribute="height" constant="232" id="J9z-GP-4qx"/>
+                                    <constraint firstAttribute="height" constant="240" id="JaE-Yz-7nS"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D6y-Vz-eNl"/>
+                                        <exclude reference="J9z-GP-4qx"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb3-Gb-wbW">
+                                <rect key="frame" x="10" y="345" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-zu-lLD">
+                                <rect key="frame" x="10" y="62" width="75" height="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="fWM-hQ-zF6">
+                                <rect key="frame" x="242" y="40" width="128" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj9-hO-Z5j">
+                                <rect key="frame" x="259" y="176" width="93" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAO-c7-qVz">
+                                <rect key="frame" x="297" y="204" width="17.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQv-Od-jJL">
+                                <rect key="frame" x="261" y="255" width="91" height="18"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC3-NI-2Oq">
+                                <rect key="frame" x="297" y="286" width="17.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Joined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAQ-MH-Izu">
+                                <rect key="frame" x="10" y="380" width="119" height="21"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecq-Wc-tX7">
+                                <rect key="frame" x="10" y="409" width="70" height="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.48673240413833507" green="0.70890737584886754" blue="0.83946314102564101" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Yj9-hO-Z5j" firstAttribute="leading" secondItem="t8N-aj-XMv" secondAttribute="trailing" constant="49" id="02s-Nc-dF4"/>
+                            <constraint firstItem="fWM-hQ-zF6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="9Nu-T3-fQy"/>
+                            <constraint firstItem="Iyd-zu-lLD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="159" id="DNY-yZ-izo"/>
+                            <constraint firstItem="t8N-aj-XMv" firstAttribute="top" secondItem="Iyd-zu-lLD" secondAttribute="bottom" constant="8" id="FNP-4C-iZf"/>
+                            <constraint firstItem="UQv-Od-jJL" firstAttribute="leading" secondItem="t8N-aj-XMv" secondAttribute="trailing" constant="51" id="Fep-oT-MCu"/>
+                            <constraint firstItem="Zb3-Gb-wbW" firstAttribute="top" secondItem="t8N-aj-XMv" secondAttribute="bottom" constant="10" id="IwO-J1-OGb"/>
+                            <constraint firstItem="oAO-c7-qVz" firstAttribute="leading" secondItem="t8N-aj-XMv" secondAttribute="trailing" constant="87" id="LUo-pg-Jlc"/>
+                            <constraint firstItem="oAO-c7-qVz" firstAttribute="top" secondItem="Yj9-hO-Z5j" secondAttribute="bottom" constant="10.5" id="Lop-V7-QAQ"/>
                             <constraint firstItem="t8N-aj-XMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MOL-ho-iM2"/>
+                            <constraint firstItem="SC3-NI-2Oq" firstAttribute="leading" secondItem="t8N-aj-XMv" secondAttribute="trailing" constant="87" id="ONL-34-T2Y"/>
+                            <constraint firstItem="UQv-Od-jJL" firstAttribute="top" secondItem="Yj9-hO-Z5j" secondAttribute="bottom" constant="61.5" id="OhI-tY-WKX"/>
+                            <constraint firstItem="t8N-aj-XMv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Pu6-sK-jzT"/>
+                            <constraint firstItem="kAQ-MH-Izu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="S63-Ig-anp"/>
+                            <constraint firstItem="Zb3-Gb-wbW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="bdX-AK-yMP"/>
+                            <constraint firstItem="Iyd-zu-lLD" firstAttribute="leading" secondItem="t8N-aj-XMv" secondAttribute="trailing" constant="36" id="dFj-3l-daL"/>
+                            <constraint firstItem="kAQ-MH-Izu" firstAttribute="top" secondItem="Zb3-Gb-wbW" secondAttribute="bottom" constant="14" id="gPl-ho-HhD"/>
+                            <constraint firstItem="fWM-hQ-zF6" firstAttribute="leading" secondItem="t8N-aj-XMv" secondAttribute="trailing" constant="32" id="lyD-Xb-vo6"/>
+                            <constraint firstItem="Iyd-zu-lLD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="nET-8W-wKv"/>
                             <constraint firstItem="t8N-aj-XMv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p6c-ek-cNx"/>
+                            <constraint firstItem="ecq-Wc-tX7" firstAttribute="top" secondItem="kAQ-MH-Izu" secondAttribute="bottom" constant="8" id="qq8-hn-iSn"/>
+                            <constraint firstItem="t8N-aj-XMv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="wWv-OJ-4YG"/>
+                            <constraint firstItem="Yj9-hO-Z5j" firstAttribute="top" secondItem="fWM-hQ-zF6" secondAttribute="bottom" constant="8" id="xga-e6-jk8"/>
+                            <constraint firstItem="SC3-NI-2Oq" firstAttribute="top" secondItem="UQv-Od-jJL" secondAttribute="bottom" constant="13" id="z7i-LP-upJ"/>
+                            <constraint firstItem="ecq-Wc-tX7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="zkb-cA-KAd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DNY-yZ-izo"/>
+                                <exclude reference="dFj-3l-daL"/>
+                                <exclude reference="MOL-ho-iM2"/>
+                                <exclude reference="p6c-ek-cNx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="dateJoinedLabel" destination="ecq-Wc-tX7" id="tnE-Ji-OSA"/>
+                        <outlet property="emailLabel" destination="Zb3-Gb-wbW" id="9Ma-G1-Vnz"/>
+                        <outlet property="followersLabel" destination="oAO-c7-qVz" id="6ca-A0-wII"/>
+                        <outlet property="followingLabel" destination="SC3-NI-2Oq" id="aCf-dZ-EMD"/>
                         <outlet property="imageView" destination="t8N-aj-XMv" id="SGZ-tW-AK4"/>
+                        <outlet property="userNameLabel" destination="Iyd-zu-lLD" id="TCE-ud-qsC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -40,4 +135,7 @@
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github" width="128" height="128"/>
+    </resources>
 </document>
