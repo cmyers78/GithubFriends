@@ -37,6 +37,9 @@ class APIController: NSObject {
                 if let jsonDictionary = self.parseJSON(data) {
                     print(jsonDictionary)
                     
+                    //let theFriend = Friend(dict: jsonDictionary)
+                    
+                    // self.delegate?.passFriend(??????)
                     
                     self.delegate?.passDictionary(jsonDictionary)
                     

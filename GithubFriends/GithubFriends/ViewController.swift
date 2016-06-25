@@ -64,8 +64,6 @@ class ViewController: UIViewController, GithubAPIDelegate {
         self.getImageFromURLString(githubFriend.avatarImage)
         
         
-        
-        
         let formattedDate = NSDateFormatter()
         formattedDate.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         print(githubFriend.dateJoined)
